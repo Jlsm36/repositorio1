@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=”X-UA-Compatible”  content="ie=edge">
+    <title>Hola Mundo</title>
+</head>
+<body>
+<center>
+<!--
+<h1> Formulario {{  el_form }} </h1><br><br> -->
+<!-- para que lo formatee como parrafo
+<h1> {{  el_form.as_p }} </h1>
+<br><br>
+-->
+
+<!--al ser formulario obliga a que los campos sean obligatorios y muestra mensaje completa este campo -->
+<!--<form>
+<h1> {{  el_form.as_p }} </h1>
+<input type="submit" value="Registrame"/>
+</form>
+<br><br>-->
+
+    <!-- ponemos método POST porque por defecto es GET y si queremos añadir un objeto no queremos que se vea en la url
+         action="" se queda en la misma página   el token es para capa de seguridad y protección ante falsificación de peticiones-->
+<form method="POST" action="">{% csrf_token %}
+<h1> {{  el_form.as_p }} </h1>
+<input type="submit" value="Registrame"/>
+</form>
+</body>
+</html>
+
